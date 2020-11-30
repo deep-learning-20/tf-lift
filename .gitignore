@@ -7,3 +7,11 @@ logs
 *.h5
 test/
 gpupy
+._release-aug
+._release-no-aug
+eiffel.jpg
+example/__MACOSX/
+example/lift-example-piccadilly/
+lsf.*
+release-aug/
+release-no-aug/
