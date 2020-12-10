@@ -1,0 +1,70 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: test-kp",
+            "type": "python",
+            "request": "launch",
+            "program": "main.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--task=test",
+                "--subtask=kp",
+                "--logdir=logs/release-no-aug",
+                "--test_img_file=./sample_imgs/zurich_hb.jpg",
+                "--test_out_file=./sample_results/no_aug_1/zurich_hb_kp.txt",
+                // "--pretrained_desc=logs/release-no-aug/desc",
+                // "--pretrained_ori=logs/release-no-aug/ori",
+                // "--pretrained_kp=./networks/release-no-aug/kp",
+                "--use_batch_norm=False",
+                "--mean_std_type=dataset",
+                "--test_num_keypoint=1000"
+            ]
+        },
+        {
+            "name": "Python: test-ori",
+            "type": "python",
+            "request": "launch",
+            "program": "main.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--task=test",
+                "--subtask=ori",
+                "--logdir=logs/release-no-aug",
+                "--test_img_file=./sample_imgs/zurich_hb.jpg",
+                "--test_kp_file=./sample_results/no_aug_1/zurich_hb_kp.txt",
+                "--test_out_file=./sample_results/no_aug_1/zurich_hb_ori.txt",
+                // "--pretrained_desc=logs/release-no-aug/desc",
+                // "--pretrained_ori=logs/release-no-aug/ori",
+                // "--pretrained_kp=./networks/release-no-aug/kp",
+                "--use_batch_norm=False",
+                "--mean_std_type=dataset",
+                "--test_num_keypoint=1000"
+            ]
+        },
+        {
+            "name": "Python: test-desc",
+            "type": "python",
+            "request": "launch",
+            "program": "main.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--task=test",
+                "--subtask=desc",
+                "--logdir=logs/release-no-aug",
+                "--test_img_file=./sample_imgs/zurich_hb.jpg",
+                "--test_kp_file=./sample_results/no_aug_1/zurich_hb_kp.txt",
+                "--test_out_file=./sample_results/no_aug_1/zurich_hb_desc.h5",
+                // "--pretrained_desc=logs/release-no-aug/desc",
+                // "--pretrained_ori=logs/release-no-aug/ori",
+                // "--pretrained_kp=./networks/release-no-aug/kp",
+                "--use_batch_norm=False",
+                "--mean_std_type=dataset",
+                "--test_num_keypoint=1000"
+            ]
+        }
+    ]
+}

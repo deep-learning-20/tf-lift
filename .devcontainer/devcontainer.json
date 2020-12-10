@@ -1,0 +1,20 @@
+{
+    "name":"LIFT",
+    "context":"..",
+    "dockerFile": "Dockerfile",
+    "runArgs": [
+        "-it",
+        "--ipc=host",
+        "--network=host",
+        "--gpus=all",
+        "--privileged",
+        "-e=DISPLAY",
+        "-v=/tmp/.X11-unix:/tmp/.X11-unix",
+        "-p=0.0.0.0:6006:6006",
+        "-v=/home/fausto/Documents/DL2020/datasets/Piccadilly:/workspaces/tf-lift/data/Piccadilly"
+	],
+	"extensions": [
+		"tht13.python",
+		"ms-python.python"
+	]
+}
