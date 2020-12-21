@@ -75,13 +75,15 @@ def loadh5(dump_file_full_name):
 
 def readh5(h5node):
     ''' Recursive function to read h5 nodes as dictionary '''
-
+    import pdb;
     dict_from_file = {}
     for _key in h5node.keys():
         if isinstance(h5node[_key], h5py._hl.group.Group):
+            # pdb.set_trace()
             dict_from_file[_key] = readh5(h5node[_key])
         else:
-            dict_from_file[_key] = h5node[_key].value
+            # pdb.set_trace()
+            dict_from_file[_key] = h5node[_key][()]
 
     return dict_from_file
 

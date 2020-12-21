@@ -260,7 +260,7 @@ class Tester(object):
 
         # For debugging
         # TODO: Remove below
-        draw_XYZS_to_img(XYZS, image_color, self.config.test_out_file + '.jpg')
+        # draw_XYZS_to_img(XYZS, image_color, self.config.test_out_file + '.jpg')
 
         nms_time = (end_time - start_time) * 1000.0
         print("NMS time is {} ms".format(nms_time))
